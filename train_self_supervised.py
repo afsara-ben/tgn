@@ -176,6 +176,7 @@ for i in range(args.n_runs):
   Path("results/").mkdir(parents=True, exist_ok=True)
 
   # Initialize Model
+  print("initializing tgn model")
   tgn = TGN(neighbor_finder=train_ngh_finder, node_features=node_features,
             edge_features=edge_features, device=device,
             n_layers=NUM_LAYER,
