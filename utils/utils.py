@@ -90,7 +90,7 @@ class RandEdgeSampler(object):
 # xzl: given @Data, build adj lists for all nodes. this is fine because there are only <100k nodes? 
 #   @max_node_idx: ignore node with ids higher than this id
 def get_neighbor_finder(data, uniform, max_node_idx=None):
-  max_node_idx = max(data.sources.max(), data.destinations.max()) if max_node_idx is None else max_node_idx
+  max_node_idx = max(data.sources.max(), data.destinations.max()) if max_node_idx is None else max_node_idx #aben: how is it working?
   adj_list = [[] for _ in range(max_node_idx + 1)]
   for source, destination, edge_idx, timestamp in zip(data.sources, data.destinations,
                                                       data.edge_idxs,
