@@ -107,6 +107,8 @@ class NeighborFinder:
     self.node_to_neighbors = []
     self.node_to_edge_idxs = []
     self.node_to_edge_timestamps = []
+    print("     aben: printing neighbor adj list    ")
+    print(adj_list)
 
     for neighbors in adj_list:
       # Neighbors is a list of tuples (neighbor, edge_idx, timestamp)
